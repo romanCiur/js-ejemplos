@@ -1,17 +1,17 @@
-		const caja = document.querySelector("#hoja")
+const caja = document.querySelector("#hoja")
 
-function obtener(){
+function obtener() {
 	fetch('https://rickandmortyapi.com/api/character/[1,22,3,5,6,8,400,300,45,276,2,175]')
-	.then(res => res.json())
-	.then(datos => {
-		 // debugger
-	  tarjeta(datos);
-	});
+		.then(res => res.json())
+		.then(datos => {
+			// debugger
+			tarjeta(datos);
+		});
 };
 
-function tarjeta(datos){
+function tarjeta(datos) {
 	caja.innerHTML = ''
-	for(let d of datos){
+	for (let d of datos) {
 		caja.innerHTML += `
 			<article class="col-sm-6 col-md-4 col-lg-3 card-group">
 				<div class="card mb-3">
