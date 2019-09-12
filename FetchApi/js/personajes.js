@@ -1,3 +1,16 @@
+window.addEventListener('load', () => {
+	function carga() {
+		const contenido = document.getElementById('contenido');
+		const carga = document.getElementById('carga');
+
+		setTimeout(() => {
+			contenido.className = "container-fluid bg-light";
+			carga.className = "d-none";
+		},3000);
+	}
+	carga();
+});
+
 const caja = document.querySelector("#hoja")
 
 const num = [172, 8, 235, 358, 167, 105, 199, 164, 78, 318, 199, 167, 404, 31, 451, 143, 102, 294, 327, 178, 48, 388, 273, 57, 261, 247, 439, 310, 327, 143, 141, 23]
@@ -25,10 +38,10 @@ function tarjeta(datos) {
 				<img src=${d.image} class="card-img-top img-fluid" alt=${d.name}>
 				<div class="card-body text-dark d-flex flex-column justify-content-between">
 				<h5 class="card-title">${d.name}</h5>
-				<p class="card-text">${d.species}</p>
+				<p class="card-text h6">${d.species}</p>
 				<a href="#" class="btn btn-outline-success" data-toggle="modal" data-target="#info${d.id}">Info</a>
 				</div>
-			</div>	
+			</div>
 		</article>
 
 		<div class="modal fade" id="info${d.id}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -36,6 +49,7 @@ function tarjeta(datos) {
 				<div class="modal-content">
 					<div class="modal-header bg-dark text-light">
 					<h5 class="modal-title" id="exampleModalLabel">${d.name}</h5>
+					<h5 class="modal-title" id="exampleModalLabel">${d.id}</h5>
 				</div>
 				<div class="modal-body bg-light">
 					<p class="card-text">Estado: ${d.status}</p>
@@ -51,6 +65,7 @@ function tarjeta(datos) {
 			</div>
 			</div>
 			</div>
+
 			`
 	}
 }

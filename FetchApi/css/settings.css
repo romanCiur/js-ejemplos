@@ -12,6 +12,14 @@ body {
 	flex-direction: column;
 }
 
+#contenido {
+	min-height: 100vh;
+}
+
+#carga {
+	min-height: 75vh;
+}
+
 footer {
 	margin-top: auto;
 	background: linear-gradient(35deg, green, yellow, green);
