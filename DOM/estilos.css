@@ -64,20 +64,24 @@ div h4{
 	height: 250px;
 	border-radius: 50%;
 	background-color: #303030;
+	transition:all .5s ease;
 }
 .Círculo{
 	width: 350px;
 	height: 350px;
 	border-radius: 50%;
 	background-color: #303030;
+	transition:all .5s ease;
 }
 .Cuadrado{
 	width: 350px;
 	height: 350px;
 	background-color: #303030;
+	transition:all .5s ease;
 }
 .Rectángulo{
 	width: 350px;
 	height: 250px;
 	background-color: #303030;
+	transition:all .5s ease;
 }
