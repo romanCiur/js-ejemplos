@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorA: #007ea7;
+    --colorB: #5c415d;
+    --colorC: #e94f37;
+    --colorD: #b0da5d;
+    --colorE: #f5e749;
+}
+
+.inicio {
+    background-color: #fff;
+}
+
+#container {
+    width: 100%;
+    /* background-color: whitesmoke; */
+    text-align: center;
+}
+
+#botones {
+    width: 100%;
+    margin: auto;
+}
+
+button {
+    height: 50px;
+    padding: .8rem;
+    color: whitesmoke;
+    font-weight: bold;
+    border: 1px solid rgb(104, 103, 103);
+    border-radius: 3px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#boton {
+    background-color: #2a2b2a;
+}
+
+.botonA,
+.CA {
+    background-color: var(--colorA);
+}
+
+.botonB,
+.CB {
+    background-color: var(--colorB);
+}
+
+.botonC,
+.CC {
+    background-color: var(--colorC);
+}
+
+.botonD,
+.CD {
+    background-color: var(--colorD);
+}
+
+.botonE,
+.CE {
+    background-color: var(--colorE);
+}
