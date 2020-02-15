@@ -6,20 +6,30 @@ window.addEventListener('load', () => {
 		setTimeout(() => {
 			contenido.className = "container-fluid bg-light";
 			carga.className = "d-none";
-		},3000);
+		}, 2000);
 	}
 	carga();
 });
 
-const caja = document.querySelector("#hoja")
+const caja = document.querySelector("#hoja");
 
-const num = [172, 8, 235, 358, 167, 105, 199, 164, 78, 318, 199, 167, 404, 31, 451, 143, 102, 294, 327, 178, 48, 388, 273, 57, 261, 247, 439, 310, 327, 143, 141, 23]
-const numA = [164, 326, 60, 259, 68, 219, 282, 191, 103, 393, 185, 88, 380, 446, 468, 107, 237, 329, 479, 429, 198, 446, 456, 126, 359, 321, 398, 258, 389, 177, 42, 186, 120, 91, 180, 2];
-const numorigin = [1, 22, 3, 56, 67, 90, 5, 27, 6, 8, 400, 300, 45, 276, 2, 175, 49, 59];
-const numB = [259, 366, 278, 87, 454, 414, 187, 388, 436, 123, 385, 101, 408, 189, 426, 271];
+
+// const num = [172, 8, 235, 358, 167, 105, 199, 164, 78, 318, 199, 167, 404, 31, 451, 143, 102, 294, 327, 178, 48, 388, 273, 57, 261, 247, 439, 310, 327, 143, 141, 23]
+// const numA = [164, 326, 60, 259, 68, 219, 282, 191, 103, 393, 185, 88, 380, 446, 468, 107, 237, 329, 479, 429, 198, 446, 456, 126, 359, 321, 398, 258, 389, 177, 42, 186, 120, 91, 180, 2];
+// const numorigin = [1, 22, 3, 56, 67, 90, 5, 27, 6, 8, 400, 300, 45, 276, 2, 175, 49, 59];
+// const numB = [259, 366, 278, 87, 454, 414, 187, 388, 436, 123, 385, 101, 408, 189, 426, 271];
 
 function obtener() {
-	fetch(`https://rickandmortyapi.com/api/character/${num},${numA},${numB},${numorigin}`)
+
+	let array = [];
+	let user_in = 32;
+
+	while (array.length <= user_in) {
+		array.push(Math.floor(493 * Math.random()));
+		console.log(array);
+	}
+
+	fetch(`https://rickandmortyapi.com/api/character/${array}`)
 		.then(res => res.json())
 		.then(datos => {
 			// debugger
